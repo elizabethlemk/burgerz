@@ -28,9 +28,10 @@ class App extends Component {
       this.setState({ selected: burger })
     } else if (action === 'delete') {
       let newArr = this.state.burgers.filter(burgers => burgers.id !== burger.id)
+      let filterNew= this.state.filter.filter(burgers => burgers.id !== burger.id)
       this.setState({
         burgers: newArr,
-        filter: newArr
+        filter: filterNew
       })
     }
   }
