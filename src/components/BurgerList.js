@@ -4,7 +4,11 @@ import BurgerItem from './BurgerItem'
 const BurgerList = (props) => {
   return (
     <div className="BurgerList">
-      { /* Render Burger Items Here*/ }
+      {props.burgers.map(burger =>
+        <BurgerItem key={burger.id}
+        burger={burger}
+        handleClick={props.handleClick}/>
+      )}
     </div>
   )
 }
