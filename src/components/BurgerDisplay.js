@@ -7,7 +7,8 @@ const BurgerDisplay = (props) => {
       <br/>
       <h1>{props.burger.name}</h1>
       <br/>
-      <select onChange={(e) => props.handleChange(e.target.value, props.burger)}>
+      <select value={props.burger.category}
+      onChange={(e) => props.handleChange(e.target.value, props.burger)}>
         <option value="Relatable">Relatable</option>
         <option value="Bougie">Bougie</option>
       </select>
